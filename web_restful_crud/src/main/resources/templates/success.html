@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--th:text 将div里面的文本内容设置为指定内容-->
+<div th:text="${hello}">div中的信息</div>
+<div th:utext="${hello}">div中的信息</div>
+<!--th:each 每次遍历都会生成当前标签-->
+<h4 th:each="name:${names}" th:text="${name}"></h4>
+<h4>
+    <span th:each="name:${names}">[[${name}]]</span>
+</h4>
+</body>
+</html>
